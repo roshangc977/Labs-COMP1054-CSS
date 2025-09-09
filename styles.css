@@ -1,0 +1,164 @@
+ /* =============================================================
+      TASKS
+       1.) Pick a Coolors palette and define: --base, --text, --secondary, --primary, --accent using CSS variables 
+       2.) Implement background image in .hero and add parallax-like effect
+       3.) Apply colours using CSS variables & var( )
+       4.) Ensure WCAG AA contrast
+    ============================================================= */
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+    /* Task 1 */
+    :root {
+      --base: #FAFAFA;
+      --text: #333;
+      --secondary: #F1F1F1;
+      --primary: #ace444;
+      --accent: #A3EEA3;
+    }
+
+    /* Task 2 */
+    .hero {
+      background-image: url('img/2.jpeg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: fixed;
+    }
+
+    /* Task 3 */
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--base);
+    }
+
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      line-height: 1.5;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+   
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+
+    .skip-link:focus {
+      position: static;
+      width: auto;
+      height: auto;
+      padding: .5rem;
+      background: #000;
+      color: #fff;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      color: var(--text);
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .75rem 1rem;
+    }
+
+    .nav a {
+      padding: .5rem .75rem;
+      border-radius: .5rem;
+      text-decoration: none;
+    }
+
+    .hero {
+      min-height: 60vh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 6rem 1rem 4rem;
+
+    }
+
+    .hero h1 {
+      font-size: clamp(2.25rem, 4vw + 1rem, 4.25rem);
+      margin: 0 0 .5rem;
+    }
+
+    .hero p {
+      max-width: 62ch;
+      margin: 0 auto 1.25rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: .85rem 1.15rem;
+      border-radius: .75rem;
+      font-weight: 700;
+    }
+
+    .stats {
+      max-width: 1100px;
+      margin: 2.5rem auto;
+      padding: 1rem;
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      background-color: var(--secondary);
+    }
+
+    .stat {
+      padding: 1rem;
+      border-radius: 1rem;
+      text-align: center;
+    }
+
+    .stat h3 {
+      margin: .25rem 0 0;
+      font-size: 2rem;
+    }
+
+    .stat p {
+      margin: 0;
+    }
+
+    footer {
+      padding: 2rem 1rem;
+      text-align: center;
+      background-color: var(--secondary);
+    }
+
+    /* Task 4 Completed and WCAG AA Contrast ensured*/
+
+    /* Lab 1(Since I missed my first class due to registration issues)
+    /*take for example: 
+    /* footer {
+      padding: 2rem 1rem;
+      text-align: center;
+      background-color: var(--secondary);
+    }
+
+    Here, footer is the selctor used to select which section, id or class to modify,
+          padding, text-align and background-color are proper ties while 2rem 1rem, center and var(--secondary) are their respective values.
+    */
