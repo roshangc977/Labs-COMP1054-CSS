@@ -22,7 +22,7 @@
 
     /* Task 2 */
     .hero {
-      background-image: url('img/2.jpeg');
+      background-image: url('2.jpeg');
       background-size: cover;
       background-repeat: no-repeat;
       background-position: fixed;
